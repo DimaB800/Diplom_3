@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -43,9 +42,8 @@ public class LoginUserTest {
         pageAuthorization.clickButtonLogIn();
         pageMainStellarBurgers.clickButtonPersonalAccount();
         PagePersonalAccount pagePersonalAccount = Selenide.page(PagePersonalAccount.class);
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountName(), map.get("name"));
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
-        pagePersonalAccount.clickExitButton();
+        Assert.assertEquals("Имя пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountName(), map.get("name"));
+        Assert.assertEquals("Email пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
     }
 
     @Test
@@ -60,9 +58,8 @@ public class LoginUserTest {
         pageAuthorization.clickButtonLogIn();
         pageMainStellarBurgers.clickButtonPersonalAccount();
         PagePersonalAccount pagePersonalAccount = Selenide.page(PagePersonalAccount.class);
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountName(), map.get("name"));
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
-        pagePersonalAccount.clickExitButton();
+        Assert.assertEquals("Имя пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountName(), map.get("name"));
+        Assert.assertEquals("Email пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
     }
 
     @Test
@@ -78,9 +75,8 @@ public class LoginUserTest {
         PageMainStellarBurgers pageMainStellarBurgers = Selenide.page(PageMainStellarBurgers.class);
         pageMainStellarBurgers.clickButtonPersonalAccount();
         PagePersonalAccount pagePersonalAccount = Selenide.page(PagePersonalAccount.class);
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountName(), map.get("name"));
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
-        pagePersonalAccount.clickExitButton();
+        Assert.assertEquals("Имя пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountName(), map.get("name"));
+        Assert.assertEquals("Email пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
     }
 
     @Test
@@ -96,9 +92,8 @@ public class LoginUserTest {
         PageMainStellarBurgers pageMainStellarBurgers = Selenide.page(PageMainStellarBurgers.class);
         pageMainStellarBurgers.clickButtonPersonalAccount();
         PagePersonalAccount pagePersonalAccount = Selenide.page(PagePersonalAccount.class);
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountName(), map.get("name"));
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
-        pagePersonalAccount.clickExitButton();
+        Assert.assertEquals("Имя пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountName(), map.get("name"));
+        Assert.assertEquals("Email пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
     }
 
 }

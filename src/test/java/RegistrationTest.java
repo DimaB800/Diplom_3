@@ -39,8 +39,8 @@ public class RegistrationTest {
         pageAuthorization.clickButtonLogIn();
         pageMainStellarBurgers.clickButtonPersonalAccount();
         PagePersonalAccount pagePersonalAccount = Selenide.page(PagePersonalAccount.class);
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountName(), map.get("name"));
-        Assert.assertEquals("Ожидаемый результат не соответствует фактическому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
+        Assert.assertEquals("Имя пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountName(), map.get("name"));
+        Assert.assertEquals("Email пользователя в личном кабинете не соответствует ожидаемому", pagePersonalAccount.getInputAccountLogin(), map.get("email"));
     }
 
     @Test
@@ -48,7 +48,7 @@ public class RegistrationTest {
     public void registrationIncorrectPasswordTest() {
         PageRegistration pageRegistration = Selenide.page(PageRegistration.class);
         pageRegistration.registrationUserIncorrectPassword();
-        assertTrue("Ожидаемый результат не соответствует фактическому", pageRegistration.checkErrorPasswordText());
+        assertTrue("Ожидаемая ошибка некорректного пароля не выводится", pageRegistration.checkErrorPasswordText());
     }
 
 }
